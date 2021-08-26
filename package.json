@@ -1,0 +1,29 @@
+{
+  "name": "restify",
+  "version": "1.0.0",
+  "description": "generic rest api using express ",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i-mostafa/restify.git"
+  },
+  "keywords": [
+    "rest",
+    "express",
+    "api",
+    "nodejs"
+  ],
+  "author": "islam mostafa - islam.mostafa.fahmey@gmail.om",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i-mostafa/restify/issues"
+  },
+  "homepage": "https://github.com/i-mostafa/restify#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "joi": "^17.4.2"
+  }
+}
