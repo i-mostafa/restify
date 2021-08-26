@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 const Router = class {
+  static avaialableDatabases = { mongodb: "mongodb", postgresql: "postgresql" };
+
   constructor({ routes, RestifyError } = {}) {
     this.RestifyError = RestifyError;
     this.router = {};

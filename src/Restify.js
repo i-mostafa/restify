@@ -1,8 +1,14 @@
+const RestifyDb = require("./db/RestifyDb");
 const Router = require("./Router");
 const RoutesSchema = require("./routes.schema");
 
 const Restify = class {
-  constructor({ routes = [], RestifyError = Error } = {}) {
+  constructor({
+    routes = [],
+    RestifyError = Error,
+    dbFactory = RestifyDb.pg,
+    db = RestifyDb.availableDatabases.pg,
+  } = {}) {
     const err = this.validateRoutes(routes);
     if (err) throw new RestifyError(err);
     return new Router({ routes, RestifyError });
